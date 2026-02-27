@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Question ❤️</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#141e30,#243b55);
+    font-family:Arial;
+    text-align:center;
+    color:white;
+    overflow:hidden;
+}
+
+.container{
+    animation:fadeIn 2s ease-in;
+}
+
+h1{
+    font-size:2.3rem;
+}
+
+button{
+    padding:12px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    margin:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.yes{
+    background:#ff4b7d;
+    color:white;
+}
+
+.no{
+    background:white;
+    color:#ff4b7d;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:scale(0.8);}
+    to{opacity:1; transform:scale(1);}
+}
+</style>
+
+<script>
+function yesClick(){
+    document.body.innerHTML=`
+    <div style="text-align:center; margin-top:100px;">
+        <h1>❤️ You just made me the happiest person ❤️</h1>
+        <h2>I promise to always respect and care for you 😊</h2>
+    </div>
+    `;
+}
+
+function moveNo(btn){
+    btn.style.position="absolute";
+    btn.style.top=Math.random()*400+"px";
+    btn.style.left=Math.random()*300+"px";
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Will you be mine? 💖</h1>
+    <button class="yes" onclick="yesClick()">Yes ❤️</button>
+    <button class="no" onmouseover="moveNo(this)">No 🙈</button>
+</div>
+
+</body>
+</html>
